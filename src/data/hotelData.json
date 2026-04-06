@@ -1,0 +1,162 @@
+{
+  "hotel": {
+    "name": "Golden Lotus Hotel",
+    "description": "Yangon city center hotel for business and family travelers.",
+    "stars": 4,
+    "phone": "+95 9 444 000 111",
+    "email": "reservations@goldenlotus.example",
+    "checkIn": "14:00",
+    "checkOut": "12:00"
+  },
+  "rooms": [
+    {
+      "name": "Standard Room",
+      "priceUsd": 45,
+      "bedType": "1 queen bed",
+      "maxGuests": 2,
+      "features": [
+        "Free Wi-Fi",
+        "City view",
+        "Breakfast included"
+      ]
+    },
+    {
+      "name": "Deluxe Room",
+      "priceUsd": 65,
+      "bedType": "1 king bed",
+      "maxGuests": 2,
+      "features": [
+        "Free Wi-Fi",
+        "Bathtub",
+        "Breakfast included"
+      ]
+    },
+    {
+      "name": "Family Suite",
+      "priceUsd": 95,
+      "bedType": "2 double beds",
+      "maxGuests": 4,
+      "features": [
+        "Free Wi-Fi",
+        "Living area",
+        "Airport pickup on request"
+      ]
+    }
+  ],
+  "policies": {
+    "earlyCheckIn": "Early check-in depends on room availability and may include an extra charge.",
+    "lateCheckOut": "Late check-out is possible until 14:00 if available.",
+    "cancellation": "Free cancellation is available up to 24 hours before check-in.",
+    "children": "Children under 6 years can stay free when using existing beds.",
+    "pets": "Pets are not allowed."
+  },
+  "amenities": {
+    "internet": "Free high-speed Wi-Fi is available in all rooms and public areas.",
+    "breakfast": "Breakfast is included for all direct bookings.",
+    "airportTransfer": "Airport transfer can be arranged with an extra fee.",
+    "parking": "Free parking is available for guests.",
+    "facilities": [
+      "Restaurant",
+      "Meeting room",
+      "Spa",
+      "24-hour front desk"
+    ]
+  },
+  "venues": [
+    {
+      "name": "Lotus Grand Ballroom",
+      "type": "Ballroom",
+      "capacity": {
+        "theater": 300,
+        "classroom": 180,
+        "banquet": 220
+      },
+      "priceUsd": 600,
+      "rentalPeriod": "Full day",
+      "features": [
+        "Stage",
+        "Projector and screen",
+        "Basic sound system",
+        "Bridal room access on request"
+      ],
+      "bestFor": [
+        "Wedding receptions",
+        "Corporate events",
+        "Large seminars"
+      ]
+    },
+    {
+      "name": "Jasmine Meeting Room",
+      "type": "Meeting Room",
+      "capacity": {
+        "boardroom": 16,
+        "theater": 30
+      },
+      "priceUsd": 120,
+      "rentalPeriod": "Half day or full day",
+      "features": [
+        "TV display",
+        "Whiteboard",
+        "Wi-Fi",
+        "Coffee break setup on request"
+      ],
+      "bestFor": [
+        "Team meetings",
+        "Client presentations",
+        "Training sessions"
+      ]
+    },
+    {
+      "name": "Garden Terrace",
+      "type": "Outdoor Venue",
+      "capacity": {
+        "standing": 120,
+        "banquet": 80
+      },
+      "priceUsd": 250,
+      "rentalPeriod": "Evening event block",
+      "features": [
+        "Decor lighting",
+        "Open-air setting",
+        "Photo corner area"
+      ],
+      "bestFor": [
+        "Birthday parties",
+        "Private dinners",
+        "Small celebrations"
+      ]
+    }
+  ],
+  "venueInfo": {
+    "bookingPolicy": "Venue reservations should be confirmed at least 3 days in advance and are subject to availability.",
+    "deposit": "A 30 percent deposit is required to confirm venue rental.",
+    "catering": "Outside catering is not allowed. In-house catering packages are available.",
+    "equipment": "Additional AV equipment, decoration, and event support staff can be arranged with extra charges.",
+    "contact": "For venue rental, guests can contact the events team at events@goldenlotus.example or +95 9 444 000 222."
+  },
+  "location": {
+    "address": "No. 88, Merchant Road, Yangon, Myanmar",
+    "airportDistance": "Approximately 35 minutes by car from Yangon International Airport.",
+    "nearbyPlaces": [
+      "Sule Pagoda",
+      "Bogyoke Market",
+      "Downtown business district"
+    ]
+  },
+  "bookingInfo": {
+    "requiredFields": [
+      "guest name",
+      "phone number",
+      "room type",
+      "check-in date",
+      "check-out date",
+      "number of guests"
+    ],
+    "payment": "Payment can be made at check-in or guaranteed by card for selected rates.",
+    "confirmation": "A confirmation ID is generated after successful booking.",
+    "website": "https://goldenlotus.example/book-now",
+    "reservationPhone": "+95 9 444 000 111",
+    "reservationEmail": "reservations@goldenlotus.example",
+    "bookingNote": "For now, guests should complete reservations through the hotel website or by contacting the reservations team directly."
+  }
+}
