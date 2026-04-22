@@ -1,162 +1,310 @@
 {
-  "hotel": {
-    "name": "Golden Lotus Hotel",
-    "description": "Yangon city center hotel for business and family travelers.",
-    "stars": 4,
-    "phone": "+95 9 444 000 111",
-    "email": "reservations@goldenlotus.example",
-    "checkIn": "14:00",
-    "checkOut": "12:00"
+  "assistant": {
+    "name": "Myanmar Hotel and Tourism Bot",
+    "description": "Travel helper for Myanmar destinations with hotel, price, contact, sightseeing, and activity information.",
+    "defaultLanguage": "my"
   },
-  "rooms": [
+  "destinations": [
     {
-      "name": "Standard Room",
-      "priceUsd": 45,
-      "bedType": "1 queen bed",
-      "maxGuests": 2,
-      "features": [
-        "Free Wi-Fi",
-        "City view",
-        "Breakfast included"
+      "name": "Yangon",
+      "aliases": ["yangon", "rangoon", "ရန်ကုန်"],
+      "summary": "Yangon is a lively city known for colonial streets, pagodas, food spots, and business travel.",
+      "hotels": [
+        {
+          "name": "Pan Pacific Yangon",
+          "category": "5-star",
+          "priceRangeUsd": "From 170 to 260 USD per night",
+          "contactPhone": "+95 1 925 3810",
+          "contactEmail": "enquiry.ppyn@panpacific.com",
+          "address": "Shwedagon Pagoda Road corner of Bogyoke Aung San Road, Yangon",
+          "highlights": ["Downtown location", "Pool", "Business-friendly"]
+        },
+        {
+          "name": "LOTTE Hotel Yangon",
+          "category": "5-star",
+          "priceRangeUsd": "From 150 to 240 USD per night",
+          "contactPhone": "+95 1 935 1000",
+          "contactEmail": "lottehotel.yangon@lotte.net",
+          "address": "No. 82, Sin Phyu Shin Avenue, Pyay Road, Yangon",
+          "highlights": ["Lake view", "Luxury stay", "Spa and dining"]
+        },
+        {
+          "name": "Hotel G Yangon",
+          "category": "4-star",
+          "priceRangeUsd": "From 70 to 120 USD per night",
+          "contactPhone": "+95 1 243 639",
+          "contactEmail": "info@hotelgyangon.com",
+          "address": "No. 5 Alan Pya Pagoda Street, Yangon",
+          "highlights": ["Modern design", "Central location", "Good for young travelers"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Shwedagon Pagoda",
+          "description": "The most famous pagoda in Myanmar and a must-visit spiritual landmark."
+        },
+        {
+          "name": "Sule Pagoda",
+          "description": "Historic downtown pagoda surrounded by colonial architecture."
+        },
+        {
+          "name": "Bogyoke Aung San Market",
+          "description": "Popular market for handicrafts, gems, clothes, and souvenirs."
+        }
+      ],
+      "activities": [
+        "Explore downtown colonial streets and tea shops",
+        "Visit rooftop restaurants and riverfront areas",
+        "Take an evening visit to Shwedagon Pagoda"
+      ],
+      "travelTips": [
+        "Best for city sightseeing, shopping, and business trips",
+        "Traffic can be heavy in the late afternoon",
+        "Many hotels can arrange airport transfer on request"
       ]
     },
     {
-      "name": "Deluxe Room",
-      "priceUsd": 65,
-      "bedType": "1 king bed",
-      "maxGuests": 2,
-      "features": [
-        "Free Wi-Fi",
-        "Bathtub",
-        "Breakfast included"
+      "name": "Mandalay",
+      "aliases": ["mandalay", "မန္တလေး"],
+      "summary": "Mandalay is known for culture, monasteries, royal history, and traditional crafts.",
+      "hotels": [
+        {
+          "name": "Mingalar Mandalay Hotel",
+          "category": "4-star",
+          "priceRangeUsd": "From 65 to 110 USD per night",
+          "contactPhone": "+95 2 694 83",
+          "contactEmail": "info@mingalarmandalay.com",
+          "address": "73rd Street, between 28th and 29th Street, Mandalay",
+          "highlights": ["Central Mandalay", "Comfortable rooms", "Restaurant"]
+        },
+        {
+          "name": "The Hotel Nova",
+          "category": "3-star",
+          "priceRangeUsd": "From 45 to 75 USD per night",
+          "contactPhone": "+95 9 420 000 615",
+          "contactEmail": "reservation@hotelnovamdy.com",
+          "address": "No. 81st Street, Mandalay",
+          "highlights": ["Budget-friendly", "Good access to town", "Family stay"]
+        },
+        {
+          "name": "Mercure Mandalay Hill Resort",
+          "category": "4-star",
+          "priceRangeUsd": "From 90 to 140 USD per night",
+          "contactPhone": "+95 2 356 8100",
+          "contactEmail": "HB046@accor.com",
+          "address": "No. 9, Kwin 416B, 10th Street, Mandalay",
+          "highlights": ["Near Mandalay Hill", "Garden setting", "Resort feel"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Mandalay Hill",
+          "description": "Scenic hill with city views and an important spiritual site."
+        },
+        {
+          "name": "Kuthodaw Pagoda",
+          "description": "Home of the world's largest book with marble slab inscriptions."
+        },
+        {
+          "name": "U Bein Bridge",
+          "description": "Famous teak bridge best visited at sunrise or sunset."
+        }
+      ],
+      "activities": [
+        "Watch sunset at U Bein Bridge",
+        "Visit craft workshops for gold leaf and marble carving",
+        "Explore pagodas and monasteries around the city"
+      ],
+      "travelTips": [
+        "Great destination for culture and photography",
+        "Hire a car or tuk tuk to cover nearby attractions easily",
+        "Sunset hours are especially popular at U Bein Bridge"
       ]
     },
     {
-      "name": "Family Suite",
-      "priceUsd": 95,
-      "bedType": "2 double beds",
-      "maxGuests": 4,
-      "features": [
-        "Free Wi-Fi",
-        "Living area",
-        "Airport pickup on request"
+      "name": "Bagan",
+      "aliases": ["bagan", "ပုဂံ"],
+      "summary": "Bagan is Myanmar's iconic temple plain with sunrise views, bicycles, and ancient history.",
+      "hotels": [
+        {
+          "name": "Bagan Thande Hotel",
+          "category": "3-star",
+          "priceRangeUsd": "From 55 to 95 USD per night",
+          "contactPhone": "+95 61 246 0035",
+          "contactEmail": "reservation@baganthandehotel.net",
+          "address": "Old Bagan, Archaeological Zone, Bagan",
+          "highlights": ["Riverside setting", "Near temples", "Classic atmosphere"]
+        },
+        {
+          "name": "Amata Garden Resort Bagan",
+          "category": "4-star",
+          "priceRangeUsd": "From 80 to 130 USD per night",
+          "contactPhone": "+95 61 246 0583",
+          "contactEmail": "bagan@amatagardenresort.com",
+          "address": "Near Nyaung U Airport Road, Bagan",
+          "highlights": ["Resort layout", "Pool", "Comfortable for families"]
+        },
+        {
+          "name": "Zfreeti Hotel",
+          "category": "3-star",
+          "priceRangeUsd": "From 35 to 60 USD per night",
+          "contactPhone": "+95 9 259 288 880",
+          "contactEmail": "reservation@zfreetihotel.com",
+          "address": "5th Thiri Pyitsaya 4 Street, Nyaung U, Bagan",
+          "highlights": ["Budget option", "Close to restaurants", "Good base for temple trips"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Ananda Temple",
+          "description": "One of the most beautiful and important temples in Bagan."
+        },
+        {
+          "name": "Shwesandaw Area",
+          "description": "Popular area for wide views over the temple plain."
+        },
+        {
+          "name": "Dhammayangyi Temple",
+          "description": "Massive temple known for its striking brickwork."
+        }
+      ],
+      "activities": [
+        "Take an early morning temple tour",
+        "Ride an e-bike across the archaeological zone",
+        "Enjoy sunset views from a designated viewpoint"
+      ],
+      "travelTips": [
+        "Best for heritage travel and temple exploration",
+        "Start sightseeing early to avoid midday heat",
+        "E-bikes are a popular way to move around Bagan"
+      ]
+    },
+    {
+      "name": "Inle Lake",
+      "aliases": ["inle", "inle lake", "အင်းလေး", "အင်းလေးကန်"],
+      "summary": "Inle Lake is famous for calm scenery, floating gardens, stilt villages, and boat sightseeing.",
+      "hotels": [
+        {
+          "name": "Novotel Inle Lake Myat Min",
+          "category": "4-star",
+          "priceRangeUsd": "From 110 to 170 USD per night",
+          "contactPhone": "+95 81 936 6122",
+          "contactEmail": "h9045@accor.com",
+          "address": "Mine Thauk Village, Nyaung Shwe, Inle Lake",
+          "highlights": ["Lakefront villas", "Quiet stay", "Resort facilities"]
+        },
+        {
+          "name": "Inle Cottage Boutique Hotel",
+          "category": "3-star",
+          "priceRangeUsd": "From 50 to 85 USD per night",
+          "contactPhone": "+95 81 209 055",
+          "contactEmail": "reservation@inlecottage.com",
+          "address": "Nyaung Shwe, Shan State",
+          "highlights": ["Boutique feel", "Friendly service", "Easy lake access"]
+        },
+        {
+          "name": "Aureum Palace Resort and Spa Inle",
+          "category": "5-star",
+          "priceRangeUsd": "From 140 to 220 USD per night",
+          "contactPhone": "+95 81 209 488",
+          "contactEmail": "reservation.inle@aureumpalacehotel.com",
+          "address": "Mine Thauk Village, Inle Lake",
+          "highlights": ["Luxury villas", "Spa", "Scenic wooden walkways"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Phaung Daw Oo Pagoda",
+          "description": "A respected religious site on the lake visited by many travelers."
+        },
+        {
+          "name": "Indein",
+          "description": "Historic pagoda area with beautiful ancient stupas."
+        },
+        {
+          "name": "Nga Hpe Chaung",
+          "description": "Well-known monastery often included in lake boat tours."
+        }
+      ],
+      "activities": [
+        "Take a boat trip through floating gardens and villages",
+        "Visit local weaving and silver workshops",
+        "Cycle around Nyaung Shwe and nearby villages"
+      ],
+      "travelTips": [
+        "Best for slow travel, scenic views, and local culture",
+        "Boat tours usually start from Nyaung Shwe",
+        "Cooler mornings and evenings can be comfortable for sightseeing"
+      ]
+    },
+    {
+      "name": "Ngapali",
+      "aliases": ["ngapali", "ငပလီ"],
+      "summary": "Ngapali is a beach destination known for sea views, seafood, and relaxing holidays.",
+      "hotels": [
+        {
+          "name": "Amazing Ngapali Resort",
+          "category": "4-star",
+          "priceRangeUsd": "From 120 to 190 USD per night",
+          "contactPhone": "+95 43 204 444",
+          "contactEmail": "reservation@amazingngapaliresort.com",
+          "address": "Ngapali Main Road, Rakhine State",
+          "highlights": ["Beachfront", "Pool", "Good honeymoon option"]
+        },
+        {
+          "name": "Bayview The Beach Resort",
+          "category": "4-star",
+          "priceRangeUsd": "From 130 to 210 USD per night",
+          "contactPhone": "+95 43 420 099",
+          "contactEmail": "info@bayviewngapali.com",
+          "address": "Mya Pyin Village, Ngapali Beach",
+          "highlights": ["Direct beach access", "Seafood dining", "Relaxed atmosphere"]
+        },
+        {
+          "name": "Rivertop Lodge",
+          "category": "3-star",
+          "priceRangeUsd": "From 60 to 95 USD per night",
+          "contactPhone": "+95 9 420 777 991",
+          "contactEmail": "stay@rivertopngapali.com",
+          "address": "Ngapali Beach area",
+          "highlights": ["Smaller lodge", "Affordable stay", "Friendly local service"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Ngapali Beach",
+          "description": "The main attraction with soft sand and long coastal views."
+        },
+        {
+          "name": "Pearl Island",
+          "description": "A small island often visited for day trips and sea views."
+        },
+        {
+          "name": "Fishing Villages",
+          "description": "Local coastal communities where visitors can see daily life and seafood markets."
+        }
+      ],
+      "activities": [
+        "Relax on the beach and enjoy sunset walks",
+        "Try fresh seafood restaurants",
+        "Take a bicycle or short boat trip around the area"
+      ],
+      "travelTips": [
+        "Best for beach holidays and slow relaxation",
+        "Many resorts arrange airport pickup from Thandwe",
+        "Seafood and sunset dining are popular highlights"
       ]
     }
   ],
-  "policies": {
-    "earlyCheckIn": "Early check-in depends on room availability and may include an extra charge.",
-    "lateCheckOut": "Late check-out is possible until 14:00 if available.",
-    "cancellation": "Free cancellation is available up to 24 hours before check-in.",
-    "children": "Children under 6 years can stay free when using existing beds.",
-    "pets": "Pets are not allowed."
-  },
-  "amenities": {
-    "internet": "Free high-speed Wi-Fi is available in all rooms and public areas.",
-    "breakfast": "Breakfast is included for all direct bookings.",
-    "airportTransfer": "Airport transfer can be arranged with an extra fee.",
-    "parking": "Free parking is available for guests.",
-    "facilities": [
-      "Restaurant",
-      "Meeting room",
-      "Spa",
-      "24-hour front desk"
+  "generalTips": {
+    "bookingAdvice": "Hotel prices can change by season, room type, and availability, so guests should confirm directly with the hotel before booking.",
+    "contactAdvice": "Phone and email contacts can help with reservation details, airport pickup, and the latest room promotions.",
+    "questionExamples": [
+      "Yangon hotel",
+      "Mandalay famous places",
+      "Bagan activities",
+      "Inle Lake hotel price",
+      "Ngapali hotel contact"
     ]
-  },
-  "venues": [
-    {
-      "name": "Lotus Grand Ballroom",
-      "type": "Ballroom",
-      "capacity": {
-        "theater": 300,
-        "classroom": 180,
-        "banquet": 220
-      },
-      "priceUsd": 600,
-      "rentalPeriod": "Full day",
-      "features": [
-        "Stage",
-        "Projector and screen",
-        "Basic sound system",
-        "Bridal room access on request"
-      ],
-      "bestFor": [
-        "Wedding receptions",
-        "Corporate events",
-        "Large seminars"
-      ]
-    },
-    {
-      "name": "Jasmine Meeting Room",
-      "type": "Meeting Room",
-      "capacity": {
-        "boardroom": 16,
-        "theater": 30
-      },
-      "priceUsd": 120,
-      "rentalPeriod": "Half day or full day",
-      "features": [
-        "TV display",
-        "Whiteboard",
-        "Wi-Fi",
-        "Coffee break setup on request"
-      ],
-      "bestFor": [
-        "Team meetings",
-        "Client presentations",
-        "Training sessions"
-      ]
-    },
-    {
-      "name": "Garden Terrace",
-      "type": "Outdoor Venue",
-      "capacity": {
-        "standing": 120,
-        "banquet": 80
-      },
-      "priceUsd": 250,
-      "rentalPeriod": "Evening event block",
-      "features": [
-        "Decor lighting",
-        "Open-air setting",
-        "Photo corner area"
-      ],
-      "bestFor": [
-        "Birthday parties",
-        "Private dinners",
-        "Small celebrations"
-      ]
-    }
-  ],
-  "venueInfo": {
-    "bookingPolicy": "Venue reservations should be confirmed at least 3 days in advance and are subject to availability.",
-    "deposit": "A 30 percent deposit is required to confirm venue rental.",
-    "catering": "Outside catering is not allowed. In-house catering packages are available.",
-    "equipment": "Additional AV equipment, decoration, and event support staff can be arranged with extra charges.",
-    "contact": "For venue rental, guests can contact the events team at events@goldenlotus.example or +95 9 444 000 222."
-  },
-  "location": {
-    "address": "No. 88, Merchant Road, Yangon, Myanmar",
-    "airportDistance": "Approximately 35 minutes by car from Yangon International Airport.",
-    "nearbyPlaces": [
-      "Sule Pagoda",
-      "Bogyoke Market",
-      "Downtown business district"
-    ]
-  },
-  "bookingInfo": {
-    "requiredFields": [
-      "guest name",
-      "phone number",
-      "room type",
-      "check-in date",
-      "check-out date",
-      "number of guests"
-    ],
-    "payment": "Payment can be made at check-in or guaranteed by card for selected rates.",
-    "confirmation": "A confirmation ID is generated after successful booking.",
-    "website": "https://goldenlotus.example/book-now",
-    "reservationPhone": "+95 9 444 000 111",
-    "reservationEmail": "reservations@goldenlotus.example",
-    "bookingNote": "For now, guests should complete reservations through the hotel website or by contacting the reservations team directly."
   }
 }
