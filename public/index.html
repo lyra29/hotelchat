@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Myanmar Hotel and Tourism Voice Bot</title>
+    <title>Myanmar Hotel and Tourism Chat Bot</title>
     <style>
       :root {
         --bg: #f5efe6;
@@ -196,22 +196,22 @@
   <body>
     <div class="page">
       <section class="hero">
-        <h1>Myanmar Hotel and Tourism Voice Bot</h1>
+        <h1>Myanmar Hotel and Tourism Chat Bot</h1>
         <p class="subtitle">
-          Speak your question and the bot will listen, find Myanmar hotel or tourism information, and answer back with voice.
+          Type or speak your question and the bot will find Myanmar hotel or tourism information in the chat.
         </p>
         <p class="examples">
           Example: "Yangon hotel", "Bagan famous places", "Inle Lake hotel price", "Ngapali contact info"
         </p>
         <p class="voice-note">
-          Best in Chrome or Edge. Voice input and voice output are configured for Myanmar language using your browser microphone permission and device speech engine.
+          Best in Chrome or Edge. Voice input uses your browser microphone permission for Myanmar-language questions.
         </p>
-        <div id="voiceStatus" class="status">Voice ready.</div>
+        <div id="voiceStatus" class="status">Mic ready.</div>
       </section>
 
       <section class="layout">
         <div class="panel">
-          <div class="panel-header">Voice Chat Test</div>
+          <div class="panel-header">Chat Test</div>
           <div id="chatBox" class="chat-box"></div>
           <div class="composer">
             <textarea
@@ -237,10 +237,8 @@
 
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       const supportsRecognition = Boolean(SpeechRecognition);
-      const supportsSpeech = "speechSynthesis" in window;
       let recognition = null;
       let isListening = false;
-      let availableVoices = [];
 
       function appendMessage(role, content) {
         const div = document.createElement("div");
@@ -255,59 +253,10 @@
         voiceStatus.className = `status ${type}`.trim();
       }
 
-      function stopSpeaking() {
-        if (supportsSpeech) {
-          window.speechSynthesis.cancel();
-        }
-      }
-
-      function refreshVoices() {
-        if (!supportsSpeech) {
-          return;
-        }
-
-        availableVoices = window.speechSynthesis.getVoices();
-      }
-
-      function getMyanmarVoice() {
-        if (!availableVoices.length) {
-          refreshVoices();
-        }
-
-        return (
-          availableVoices.find((voice) => voice.lang?.toLowerCase().startsWith("my")) ||
-          availableVoices.find((voice) => /myanmar|burmese/i.test(voice.name || "")) ||
-          null
-        );
-      }
-
-      function speakReply(text) {
-        if (!supportsSpeech || !text) {
-          return;
-        }
-
-        stopSpeaking();
-
-        const utterance = new SpeechSynthesisUtterance(text);
-        const selectedVoice = getMyanmarVoice();
-        utterance.lang = "my-MM";
-        if (selectedVoice) {
-          utterance.voice = selectedVoice;
-          utterance.lang = selectedVoice.lang || "my-MM";
-        }
-        utterance.rate = 1;
-        utterance.pitch = 1;
-        utterance.onstart = () => updateVoiceStatus("Speaking reply...");
-        utterance.onend = () => updateVoiceStatus("Voice ready.");
-        utterance.onerror = () => updateVoiceStatus("Myanmar voice reply could not be played.", "error");
-        window.speechSynthesis.speak(utterance);
-      }
-
       async function sendMessage(messageOverride = "") {
         const message = (messageOverride || messageInput.value).trim();
         if (!message) return;
 
-        stopSpeaking();
         appendMessage("user", message);
         history.push({ role: "user", content: message });
         messageInput.value = "";
@@ -326,19 +275,15 @@
           const reply = data.reply || data.error || "Unexpected error";
           appendMessage("assistant", reply);
           history.push({ role: "assistant", content: reply });
-          speakReply(reply);
         } catch (error) {
           const fallback = "တောင်းပန်ပါတယ်။ Server error ဖြစ်နေပါတယ်။";
           appendMessage("assistant", fallback);
-          speakReply(fallback);
           updateVoiceStatus("Server error while getting reply.", "error");
         } finally {
           sendBtn.disabled = false;
           micBtn.disabled = !supportsRecognition;
-          if (!supportsSpeech) {
-            updateVoiceStatus("Voice input is ready, but voice output is not supported on this browser.", "error");
-          } else if (!isListening) {
-            updateVoiceStatus("Voice ready.");
+          if (!isListening) {
+            updateVoiceStatus("Mic ready.");
           }
         }
       }
@@ -347,7 +292,7 @@
         isListening = listening;
         micBtn.textContent = listening ? "Stop Voice" : "Start Voice";
         micBtn.classList.toggle("listening", listening);
-        updateVoiceStatus(listening ? "Listening... Speak now." : "Voice ready.", listening ? "listening" : "");
+        updateVoiceStatus(listening ? "Listening... Speak now." : "Mic ready.", listening ? "listening" : "");
       }
 
       function setupRecognition() {
@@ -363,7 +308,6 @@
         recognition.maxAlternatives = 1;
 
         recognition.onstart = () => {
-          stopSpeaking();
           setListeningState(true);
         };
 
@@ -391,30 +335,6 @@
         };
       }
 
-      function setupSpeechVoices() {
-        if (!supportsSpeech) {
-          return;
-        }
-
-        refreshVoices();
-
-        if (!getMyanmarVoice()) {
-          updateVoiceStatus("Myanmar voice is not installed in this browser or device. The bot may skip Myanmar text in speech.", "error");
-        }
-
-        if (typeof window.speechSynthesis.onvoiceschanged !== "undefined") {
-          window.speechSynthesis.onvoiceschanged = () => {
-            refreshVoices();
-
-            if (!getMyanmarVoice() && !isListening) {
-              updateVoiceStatus("Myanmar voice is not installed in this browser or device. The bot may skip Myanmar text in speech.", "error");
-            } else if (!isListening) {
-              updateVoiceStatus("Voice ready.");
-            }
-          };
-        }
-      }
-
       sendBtn.addEventListener("click", () => sendMessage());
 
       micBtn.addEventListener("click", () => {
@@ -438,7 +358,6 @@
       });
 
       setupRecognition();
-      setupSpeechVoices();
 
       appendMessage(
         "assistant",
