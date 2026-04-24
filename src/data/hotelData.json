@@ -297,7 +297,7 @@
     },
     {
       "name": "Taunggyi",
-      "aliases": ["taunggyi"],
+      "aliases": ["taunggyi", "taung gyi", "shan state capital"],
       "summary": "Taunggyi is a cool highland city known for Shan culture, hill scenery, and easy access to southern Shan State attractions.",
       "hotels": [
         {
@@ -355,7 +355,7 @@
     },
     {
       "name": "Ngwesaung",
-      "aliases": ["ngwesaung", "ngwe saung", "ngwe saung beach"],
+      "aliases": ["ngwesaung", "ngwe saung", "ngwe saung beach", "ngwe saung"],
       "summary": "Ngwesaung is a long sandy beach destination popular for weekend getaways, relaxed resorts, and coastal sunsets.",
       "hotels": [
         {
@@ -413,7 +413,7 @@
     },
     {
       "name": "Chaungtha",
-      "aliases": ["chaungthar", "chaungtha", "chaung tha"],
+      "aliases": ["chaungthar", "chaungtha", "chaung tha", "chaung thar beach"],
       "summary": "Chaungtha is a casual beach destination known for easy local travel, seafood, and more budget-friendly seaside stays.",
       "hotels": [
         {
@@ -471,7 +471,7 @@
     },
     {
       "name": "Pyin Oo Lwin",
-      "aliases": ["pyin oo lwin", "pyinoolwin", "maymyo"],
+      "aliases": ["pyin oo lwin", "pyinoolwin", "pyin u lwin", "maymyo"],
       "summary": "Pyin Oo Lwin is a scenic hill town known for cool weather, colonial-era charm, gardens, and waterfalls.",
       "hotels": [
         {
@@ -529,7 +529,7 @@
     },
     {
       "name": "Kalaw",
-      "aliases": ["kalaw"],
+      "aliases": ["kalaw", "kalaw hill town"],
       "summary": "Kalaw is a peaceful mountain town known for trekking, pine forests, and relaxed Shan highland scenery.",
       "hotels": [
         {
@@ -587,7 +587,7 @@
     },
     {
       "name": "Bago",
-      "aliases": ["bago", "pegu"],
+      "aliases": ["bago", "pegu", "bago city"],
       "summary": "Bago is a historic city near Yangon known for major pagodas, royal history, and easy cultural day trips.",
       "hotels": [
         {
