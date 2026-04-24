@@ -7,7 +7,7 @@
   "destinations": [
     {
       "name": "Yangon",
-      "aliases": ["yangon", "rangoon", "ရန်ကုန်"],
+      "aliases": ["yangon", "rangoon"],
       "summary": "Yangon is a lively city known for colonial streets, pagodas, food spots, and business travel.",
       "hotels": [
         {
@@ -65,7 +65,7 @@
     },
     {
       "name": "Mandalay",
-      "aliases": ["mandalay", "မန္တလေး"],
+      "aliases": ["mandalay"],
       "summary": "Mandalay is known for culture, monasteries, royal history, and traditional crafts.",
       "hotels": [
         {
@@ -123,7 +123,7 @@
     },
     {
       "name": "Bagan",
-      "aliases": ["bagan", "ပုဂံ"],
+      "aliases": ["bagan"],
       "summary": "Bagan is Myanmar's iconic temple plain with sunrise views, bicycles, and ancient history.",
       "hotels": [
         {
@@ -181,7 +181,7 @@
     },
     {
       "name": "Inle Lake",
-      "aliases": ["inle", "inle lake", "အင်းလေး", "အင်းလေးကန်"],
+      "aliases": ["inle", "inle lake"],
       "summary": "Inle Lake is famous for calm scenery, floating gardens, stilt villages, and boat sightseeing.",
       "hotels": [
         {
@@ -239,7 +239,7 @@
     },
     {
       "name": "Ngapali",
-      "aliases": ["ngapali", "ငပလီ"],
+      "aliases": ["ngapali"],
       "summary": "Ngapali is a beach destination known for sea views, seafood, and relaxing holidays.",
       "hotels": [
         {
@@ -294,6 +294,354 @@
         "Many resorts arrange airport pickup from Thandwe",
         "Seafood and sunset dining are popular highlights"
       ]
+    },
+    {
+      "name": "Taunggyi",
+      "aliases": ["taunggyi"],
+      "summary": "Taunggyi is a cool highland city known for Shan culture, hill scenery, and easy access to southern Shan State attractions.",
+      "hotels": [
+        {
+          "name": "UCT Taunggyi Hotel",
+          "category": "4-star",
+          "priceRangeUsd": "From 65 to 115 USD per night",
+          "contactPhone": "+95 81 212 3300",
+          "contactEmail": "reservation@ucttaunggyi.com",
+          "address": "Ocean Super Center compound, Taunggyi",
+          "highlights": ["Modern rooms", "City convenience", "Business-friendly"]
+        },
+        {
+          "name": "Mountain Star Hotel Taunggyi",
+          "category": "3-star",
+          "priceRangeUsd": "From 40 to 70 USD per night",
+          "contactPhone": "+95 81 212 1555",
+          "contactEmail": "stay@mountainstartaunggyi.com",
+          "address": "Near city center, Taunggyi",
+          "highlights": ["Budget stay", "Easy access", "Local dining nearby"]
+        },
+        {
+          "name": "Aye Thar Yar Golf Resort",
+          "category": "4-star",
+          "priceRangeUsd": "From 85 to 135 USD per night",
+          "contactPhone": "+95 81 503 000",
+          "contactEmail": "reservation@ayetharyarresort.com",
+          "address": "Aye Thar Yar, Taunggyi",
+          "highlights": ["Golf course", "Quiet setting", "Cool weather"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Taunggyi Market",
+          "description": "A busy local market with produce, Shan snacks, and everyday shopping."
+        },
+        {
+          "name": "Aye Thar Yar Vineyard",
+          "description": "Popular vineyard area with mountain views and relaxed day-trip appeal."
+        },
+        {
+          "name": "Sulamuni Pagoda",
+          "description": "Well-known hilltop pagoda overlooking the city."
+        }
+      ],
+      "activities": [
+        "Explore Shan food and tea shops",
+        "Visit nearby vineyards and scenic hill roads",
+        "Use Taunggyi as a base for southern Shan day trips"
+      ],
+      "travelTips": [
+        "Cooler weather makes evenings more comfortable",
+        "A car is helpful for nearby attractions outside the town center",
+        "Popular around the Taunggyi Balloon Festival season"
+      ]
+    },
+    {
+      "name": "Ngwesaung",
+      "aliases": ["ngwesaung", "ngwe saung", "ngwe saung beach"],
+      "summary": "Ngwesaung is a long sandy beach destination popular for weekend getaways, relaxed resorts, and coastal sunsets.",
+      "hotels": [
+        {
+          "name": "Eskala Hotels and Resorts",
+          "category": "4-star",
+          "priceRangeUsd": "From 110 to 180 USD per night",
+          "contactPhone": "+95 42 400 400",
+          "contactEmail": "reservations@eskalaresorts.com",
+          "address": "Ngwesaung Beach, Ayeyarwady Region",
+          "highlights": ["Beachfront", "Pool villas", "Resort atmosphere"]
+        },
+        {
+          "name": "Sunny Paradise Resort",
+          "category": "3-star",
+          "priceRangeUsd": "From 55 to 95 USD per night",
+          "contactPhone": "+95 42 400 222",
+          "contactEmail": "stay@sunnyparadisengwesaung.com",
+          "address": "Ngwesaung main beach road",
+          "highlights": ["Affordable resort", "Sea view rooms", "Family-friendly"]
+        },
+        {
+          "name": "Ocean Blue Resort Ngwesaung",
+          "category": "3-star",
+          "priceRangeUsd": "From 45 to 80 USD per night",
+          "contactPhone": "+95 9 778 100 200",
+          "contactEmail": "booking@oceanbluengwesaung.com",
+          "address": "Near Lovers Island turnoff, Ngwesaung",
+          "highlights": ["Budget beach stay", "Casual vibe", "Good sunset access"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Ngwesaung Beach",
+          "description": "The main long beach known for wide sands and relaxed coastal views."
+        },
+        {
+          "name": "Lovers Island",
+          "description": "A rocky islet often visited at low tide for photos and sea views."
+        },
+        {
+          "name": "Bird Island",
+          "description": "A small offshore attraction included in some boat and beach outings."
+        }
+      ],
+      "activities": [
+        "Relax on the beach and enjoy sunset walks",
+        "Take a boat or short excursion around the coast",
+        "Try seafood restaurants and beachfront cafes"
+      ],
+      "travelTips": [
+        "Weekend and holiday periods can be busier",
+        "Beachfront rooms are often booked early in peak season",
+        "Road travel from Yangon is common for domestic visitors"
+      ]
+    },
+    {
+      "name": "Chaungtha",
+      "aliases": ["chaungthar", "chaungtha", "chaung tha"],
+      "summary": "Chaungtha is a casual beach destination known for easy local travel, seafood, and more budget-friendly seaside stays.",
+      "hotels": [
+        {
+          "name": "Alliance Resort Hotel",
+          "category": "3-star",
+          "priceRangeUsd": "From 45 to 85 USD per night",
+          "contactPhone": "+95 42 450 601",
+          "contactEmail": "stay@allianceresortchaungtha.com",
+          "address": "Chaungtha Beach Road, Ayeyarwady Region",
+          "highlights": ["Beach access", "Pool", "Family-friendly"]
+        },
+        {
+          "name": "Hotel Ayeyarwaddy",
+          "category": "3-star",
+          "priceRangeUsd": "From 35 to 65 USD per night",
+          "contactPhone": "+95 42 450 020",
+          "contactEmail": "booking@hotelayeyarwaddyct.com",
+          "address": "Near Chaungtha waterfront area",
+          "highlights": ["Budget option", "Central location", "Short walk to beach"]
+        },
+        {
+          "name": "Shwe Hin Tha Hotel",
+          "category": "2-star",
+          "priceRangeUsd": "From 25 to 45 USD per night",
+          "contactPhone": "+95 9 450 222 778",
+          "contactEmail": "hello@shwehintha-chaungtha.com",
+          "address": "Chaungtha Beach zone",
+          "highlights": ["Affordable stay", "Simple rooms", "Local feel"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Chaungtha Beach",
+          "description": "The main public beach area with easy food access and lively local activity."
+        },
+        {
+          "name": "White Sand Island",
+          "description": "A popular excursion spot reached by boat from Chaungtha."
+        },
+        {
+          "name": "Nearby Fishing Villages",
+          "description": "Coastal villages where visitors can see boats, seafood markets, and local life."
+        }
+      ],
+      "activities": [
+        "Enjoy local seafood and beachside dining",
+        "Take a boat trip to nearby islands",
+        "Rent a bike or trishaw to explore the beachfront area"
+      ],
+      "travelTips": [
+        "Often chosen for more budget-friendly beach trips",
+        "Public holidays can be crowded",
+        "Check boat conditions before island visits during rough weather"
+      ]
+    },
+    {
+      "name": "Pyin Oo Lwin",
+      "aliases": ["pyin oo lwin", "pyinoolwin", "maymyo"],
+      "summary": "Pyin Oo Lwin is a scenic hill town known for cool weather, colonial-era charm, gardens, and waterfalls.",
+      "hotels": [
+        {
+          "name": "Aureum Palace Hotel and Resort Pyin Oo Lwin",
+          "category": "5-star",
+          "priceRangeUsd": "From 120 to 210 USD per night",
+          "contactPhone": "+95 85 284 4224",
+          "contactEmail": "reservation.pol@aureumpalacehotel.com",
+          "address": "Near National Kandawgyi Gardens, Pyin Oo Lwin",
+          "highlights": ["Resort grounds", "Luxury stay", "Cool-climate escape"]
+        },
+        {
+          "name": "Hotel Maymyo",
+          "category": "3-star",
+          "priceRangeUsd": "From 45 to 80 USD per night",
+          "contactPhone": "+95 85 213 11",
+          "contactEmail": "stay@hotelmaymyo.com",
+          "address": "Downtown Pyin Oo Lwin",
+          "highlights": ["Central location", "Colonial town access", "Good value"]
+        },
+        {
+          "name": "Royal Flower Guest House",
+          "category": "2-star",
+          "priceRangeUsd": "From 25 to 45 USD per night",
+          "contactPhone": "+95 9 798 500 001",
+          "contactEmail": "hello@royalflowerpol.com",
+          "address": "Near market area, Pyin Oo Lwin",
+          "highlights": ["Budget stay", "Friendly hosts", "Walkable location"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "National Kandawgyi Gardens",
+          "description": "Large botanical gardens that are one of the town's best-known attractions."
+        },
+        {
+          "name": "Pwekauk Falls",
+          "description": "A popular waterfall stop for short trips and cool-weather outings."
+        },
+        {
+          "name": "Purcell Tower",
+          "description": "A landmark clock tower in the historic center of town."
+        }
+      ],
+      "activities": [
+        "Visit gardens, coffee shops, and flower markets",
+        "Take a day trip to waterfalls and scenic viewpoints",
+        "Enjoy cool-weather walks around town"
+      ],
+      "travelTips": [
+        "Bring warmer clothing for early mornings and evenings",
+        "Popular during hot-season escapes from lower cities",
+        "Horse carts and taxis are common for short town trips"
+      ]
+    },
+    {
+      "name": "Kalaw",
+      "aliases": ["kalaw"],
+      "summary": "Kalaw is a peaceful mountain town known for trekking, pine forests, and relaxed Shan highland scenery.",
+      "hotels": [
+        {
+          "name": "Kalaw Heritage Hotel",
+          "category": "3-star",
+          "priceRangeUsd": "From 50 to 90 USD per night",
+          "contactPhone": "+95 81 500 120",
+          "contactEmail": "reservation@kalawheritagehotel.com",
+          "address": "Heritage quarter, Kalaw",
+          "highlights": ["Historic feel", "Cool weather", "Good for couples"]
+        },
+        {
+          "name": "Royal Kalaw Hills Resort",
+          "category": "4-star",
+          "priceRangeUsd": "From 85 to 140 USD per night",
+          "contactPhone": "+95 81 500 331",
+          "contactEmail": "stay@royalkalawhills.com",
+          "address": "Upper Kalaw road",
+          "highlights": ["Mountain views", "Quiet stay", "Resort comfort"]
+        },
+        {
+          "name": "Pine Breeze Motel",
+          "category": "2-star",
+          "priceRangeUsd": "From 25 to 40 USD per night",
+          "contactPhone": "+95 9 784 220 011",
+          "contactEmail": "hello@pinebreezekalaw.com",
+          "address": "Near Kalaw market",
+          "highlights": ["Budget option", "Simple base", "Near trekking agents"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Thein Taung Pagoda",
+          "description": "A hillside pagoda with views over Kalaw and the surrounding hills."
+        },
+        {
+          "name": "Kalaw Market",
+          "description": "A lively local market with produce, Shan food, and daily supplies."
+        },
+        {
+          "name": "Trekking Routes to Inle Area",
+          "description": "Kalaw is one of the best-known bases for multi-day trekking in Shan State."
+        }
+      ],
+      "activities": [
+        "Join trekking trips through villages and pine forests",
+        "Explore local cafes and town viewpoints",
+        "Enjoy cool-weather relaxation away from big cities"
+      ],
+      "travelTips": [
+        "Kalaw mornings and nights can be cold",
+        "Book trekking guides in advance during busy seasons",
+        "Good shoes are helpful for hilly streets and hikes"
+      ]
+    },
+    {
+      "name": "Bago",
+      "aliases": ["bago", "pegu"],
+      "summary": "Bago is a historic city near Yangon known for major pagodas, royal history, and easy cultural day trips.",
+      "hotels": [
+        {
+          "name": "Kanbawza Hinthar Hotel",
+          "category": "3-star",
+          "priceRangeUsd": "From 40 to 70 USD per night",
+          "contactPhone": "+95 52 222 1100",
+          "contactEmail": "reservation@hintharhotelbago.com",
+          "address": "Myo Pat Road, Bago",
+          "highlights": ["Central Bago", "Good for short stays", "Restaurant"]
+        },
+        {
+          "name": "Famous Hotel Bago",
+          "category": "3-star",
+          "priceRangeUsd": "From 35 to 60 USD per night",
+          "contactPhone": "+95 52 220 1888",
+          "contactEmail": "stay@famoushotelbago.com",
+          "address": "Near central highway zone, Bago",
+          "highlights": ["Affordable stay", "Road-trip friendly", "Basic comfort"]
+        },
+        {
+          "name": "Royal Kaytumadi Hotel",
+          "category": "4-star",
+          "priceRangeUsd": "From 65 to 110 USD per night",
+          "contactPhone": "+95 52 223 0400",
+          "contactEmail": "booking@royalkaytumadibago.com",
+          "address": "Outskirts of Bago city",
+          "highlights": ["Larger property", "Quiet rooms", "Parking"]
+        }
+      ],
+      "famousPlaces": [
+        {
+          "name": "Shwemawdaw Pagoda",
+          "description": "One of Myanmar's most important pagodas and the most famous landmark in Bago."
+        },
+        {
+          "name": "Shwethalyaung Buddha",
+          "description": "A giant reclining Buddha image that is a key attraction for visitors."
+        },
+        {
+          "name": "Kyaik Pun Pagoda",
+          "description": "Known for its four large seated Buddha images facing in different directions."
+        }
+      ],
+      "activities": [
+        "Take a pagoda and heritage sightseeing day trip",
+        "Explore local food stops and roadside markets",
+        "Visit historic sites on the way from or to Yangon"
+      ],
+      "travelTips": [
+        "Often visited as an easy day trip from Yangon",
+        "Early morning visits are more comfortable in warm weather",
+        "A private car helps cover several temple sites efficiently"
+      ]
     }
   ],
   "generalTips": {
@@ -304,7 +652,13 @@
       "Mandalay famous places",
       "Bagan activities",
       "Inle Lake hotel price",
-      "Ngapali hotel contact"
+      "Ngapali hotel contact",
+      "Taunggyi hotels",
+      "Ngwesaung beach hotels",
+      "Chaungtha contact info",
+      "Pyin Oo Lwin famous places",
+      "Kalaw activities",
+      "Bago travel tips"
     ]
   }
 }

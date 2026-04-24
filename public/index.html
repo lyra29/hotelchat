@@ -201,10 +201,10 @@
           Type or speak your question and the bot will find Myanmar hotel or tourism information in the chat.
         </p>
         <p class="examples">
-          Example: "Yangon hotel", "Bagan famous places", "Inle Lake hotel price", "Ngapali contact info"
+          Example: "Yangon hotel", "Bagan famous places", "Taunggyi hotels", "Pyin Oo Lwin famous places"
         </p>
         <p class="voice-note">
-          Best in Chrome or Edge. Voice input uses your browser microphone permission for Myanmar-language questions.
+          Voice works best on Chrome desktop. Other browsers and many phones may not support microphone input here.
         </p>
         <div id="voiceStatus" class="status">Mic ready.</div>
       </section>
@@ -253,6 +253,11 @@
         voiceStatus.className = `status ${type}`.trim();
       }
 
+      function hideMicButton() {
+        micBtn.hidden = true;
+        micBtn.style.display = "none";
+      }
+
       async function sendMessage(messageOverride = "") {
         const message = (messageOverride || messageInput.value).trim();
         if (!message) return;
@@ -297,8 +302,8 @@
 
       function setupRecognition() {
         if (!supportsRecognition) {
-          micBtn.disabled = true;
-          updateVoiceStatus("Voice input is not supported on this browser. Try Chrome or Edge.", "error");
+          hideMicButton();
+          updateVoiceStatus("Voice input is unavailable here. Voice works best on Chrome desktop.", "error");
           return;
         }
 
@@ -362,6 +367,11 @@
       appendMessage(
         "assistant",
         "မင်္ဂလာပါ။ Myanmar hotel and tourism voice bot ဖြစ်ပါတယ်။ Yangon, Mandalay, Bagan, Inle Lake, Ngapali တို့အတွက် hotel, price, contact info, famous places နဲ့ activities ကို မေးနိုင်ပါတယ်။"
+      );
+      chatBox.innerHTML = "";
+      appendMessage(
+        "assistant",
+        "Welcome. Ask about Yangon, Mandalay, Bagan, Inle Lake, Ngapali, Taunggyi, Ngwesaung, Chaungtha, Pyin Oo Lwin, Kalaw, or Bago for hotel, price, contact info, famous places, and activities."
       );
     </script>
   </body>
