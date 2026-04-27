@@ -410,6 +410,7 @@
 
           messageInput.value = transcript;
           updateVoiceStatus(`Heard: ${transcript}`);
+          recognition.stop();
           sendMessage(transcript);
         };
 
