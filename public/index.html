@@ -351,9 +351,15 @@
           });
 
           const data = await response.json();
-          const reply = data.reply || data.error || "Unexpected error";
+          const errorReason = [data.error, data.details].filter(Boolean).join(" Reason: ");
+          const reply = response.ok
+            ? data.reply || "Unexpected error"
+            : errorReason || "Unexpected error";
           appendMessage("assistant", reply);
           history.push({ role: "assistant", content: reply });
+          if (!response.ok) {
+            updateVoiceStatus(errorReason || "Server error while getting reply.", "error");
+          }
         } catch (error) {
           const fallback = "တောင်းပန်ပါတယ်။ Server error ဖြစ်နေပါတယ်။";
           appendMessage("assistant", fallback);
