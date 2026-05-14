@@ -581,14 +581,16 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
           required
         ></textarea>
         <div class="chat-tools">
+          <!-- Web Speech API microphone input disabled.
           <button id="chatMic" class="chat-mic" type="button" aria-label="Start voice input" title="Start voice input">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 15a3 3 0 0 0 3-3V7a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Zm5-3a1 1 0 1 1 2 0 7 7 0 0 1-6 6.93V21h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2.07A7 7 0 0 1 5 12a1 1 0 1 1 2 0 5 5 0 1 0 10 0Z" />
             </svg>
           </button>
+          -->
           <button id="chatSend" class="chat-send" type="submit">Send</button>
         </div>
-        <div id="voiceStatus" class="voice-status"></div>
+        <!-- <div id="voiceStatus" class="voice-status"></div> -->
       </form>
     </aside>
 
@@ -599,19 +601,11 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
       const chatMessages = document.getElementById("chatMessages");
       const chatForm = document.getElementById("chatForm");
       const chatInput = document.getElementById("chatInput");
-      const chatMic = document.getElementById("chatMic");
       const chatSend = document.getElementById("chatSend");
-      const voiceStatus = document.getElementById("voiceStatus");
-
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const supportsRecognition = Boolean(SpeechRecognition);
-      let recognition = null;
-      let isListening = false;
 
       const state = {
         open: false,
         busy: false,
-        voiceReady: false,
         introShown: false,
         history: []
       };
@@ -640,8 +634,15 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
         state.busy = isBusy;
         chatInput.disabled = isBusy;
         chatSend.disabled = isBusy;
-        chatMic.disabled = isBusy || !supportsRecognition;
       }
+
+      /*
+      const chatMic = document.getElementById("chatMic");
+      const voiceStatus = document.getElementById("voiceStatus");
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const supportsRecognition = Boolean(SpeechRecognition);
+      let recognition = null;
+      let isListening = false;
 
       function updateVoiceStatus(message, type = "") {
         voiceStatus.textContent = message;
@@ -714,6 +715,7 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
           setListeningState(false);
         };
       }
+      */
 
       function setPanelOpen(nextOpen) {
         state.open = nextOpen;
@@ -725,8 +727,6 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
         if (nextOpen) {
           showIntroMessage();
           chatInput.focus();
-        } else if (isListening && recognition) {
-          recognition.stop();
         }
       }
 
@@ -748,7 +748,6 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
         state.history.push({ role: "user", content: message });
         chatInput.value = "";
         setBusy(true);
-        updateVoiceStatus("Getting reply...");
 
         try {
           const response = await fetch("/api/chat", {
@@ -774,12 +773,8 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
           const fallback = "Sorry, the chat service is unavailable right now. Please try again.";
           appendMessage("assistant", fallback);
           state.history.push({ role: "assistant", content: fallback });
-          updateVoiceStatus("Server error while getting reply.", "error");
         } finally {
           setBusy(false);
-          if (!isListening && state.voiceReady) {
-            updateVoiceStatus("Mic ready.");
-          }
           chatInput.focus();
         }
       }
@@ -787,6 +782,7 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
       chatLauncher.addEventListener("click", () => setPanelOpen(!state.open));
       chatClose.addEventListener("click", () => setPanelOpen(false));
       chatForm.addEventListener("submit", sendMessage);
+      /*
       chatMic.addEventListener("click", () => {
         if (!recognition || state.busy) {
           return;
@@ -799,6 +795,7 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
 
         recognition.start();
       });
+      */
 
       chatInput.addEventListener("keydown", (event) => {
         if (event.key === "Enter" && !event.shiftKey) {
@@ -813,7 +810,7 @@ Voice works best on Chrome desktop. Other browsers and many phones may not suppo
         }
       });
 
-      setupRecognition();
+      // setupRecognition();
     </script>
     <script src="https://api.anvevoice.app/functions/v1/voice-assistant-embed-js?embedId=e314cfba-6321-45cf-8ff4-d6c75d1b6bba&position=bottom-right&theme=light"></script>
   </body>
