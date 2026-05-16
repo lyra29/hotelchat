@@ -1,6 +1,6 @@
-# Myanmar Hotel Booking Bot MVP
+# Myanmar Tourism ChatBot MVP
 
-This is a simple Gemini-powered hotel chatbot MVP designed for Myanmar-language conversations.
+This is a simple Gemini-powered toursim chatbot MVP designed for Myanmar-language conversations.
 
 ## Features
 
@@ -57,17 +57,4 @@ http://localhost:3000
 - `src/data/hotelData.json` - hotel knowledge base
 - `public/index.html` - test chat UI and booking form
 
-## Current Limitations
 
-- Booking data is stored only in memory
-- Availability is mocked
-- No phone or speech integration yet
-- No authentication or admin panel yet
-
-## Suggested Next Steps
-
-1. Connect `/api/availability` and `/api/bookings` to your real hotel system
-2. Move hotel knowledge to a database or CMS
-3. Add conversation logging
-4. Add Burmese speech-to-text and text-to-speech for phone support
-5. Add human handoff for failed or high-risk requests
