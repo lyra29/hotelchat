@@ -15,6 +15,10 @@ if (!process.env.GEMINI_API_KEY) {
 }
 
 app.use(cors());
+app.use((_req, res, next) => {
+  res.setHeader("Permissions-Policy", "microphone=(self)");
+  next();
+});
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
